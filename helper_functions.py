@@ -178,7 +178,7 @@ def local_alignment(seq1, seq2, scoring_function):
                 j = y
                 break
 
-    print(i, j)
+    max_score = float(alignments[i][j])
 
     seq1_final = []
     seq2_final = []
@@ -207,16 +207,10 @@ def local_alignment(seq1, seq2, scoring_function):
     seq1_final.reverse()
     seq2_final.reverse()
 
-    for row in alignments:
-        print(row)
-    
-    for row in pred:
-        print(row)
-
     return (
         "".join(seq1_final),
         "".join(seq2_final),
-        float(alignments[n][m])
+        max_score
     )
 
 
