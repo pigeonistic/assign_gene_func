@@ -217,7 +217,6 @@ def local_alignment(seq1, seq2, scoring_function):
 ## This is an example scoring function, you should implement a version which uses a scoring matrix 
 def scoring_function(x, y):
     if x == "-" or y == "-":
-        # TODO check scoring gap
-        return -5
+        return -8
 
     return sub_matrix[x, y]
